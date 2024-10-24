@@ -6,7 +6,7 @@
     <title>Ruochen Mei</title>
     <style>
         body {
-            background-color: rgb(244, 244, 244);
+            background-color: rgb(255, 255, 255);
             font-family: Arial, sans-serif;
             color: rgb(50, 50, 50);
             margin: 0;
@@ -14,7 +14,7 @@
         }
 
         main {
-            padding-top: 70px;
+            padding-top: 120px;
         }
 
         a {
@@ -28,7 +28,7 @@
             position: fixed;
             left: 0;
             right: 0;
-            padding: 10px 20px;
+            padding: 10px 20px 30px 20px;
             background-color: white;
             z-index: 10;
         }
@@ -36,6 +36,16 @@
         .creator {
             font-weight: bold;
             font-size: 30px;
+        }
+
+        .ig-container{
+            display: flex;
+            align-items: center;
+            padding-top:6px;
+        }
+
+        .ig-logo{
+            margin-right: 10px;
         }
 
         .menu-div {
@@ -146,12 +156,27 @@ video {
     <div>
         <div class="creator">MEI RUOCHEN</div>
         <div>Set Designer</div>
+
+        <div>                      
+            <div class="ig-container">
+                <div class="ig-logo">
+                    <a href="https://www.instagram.com/i_am_summerrr/" target="_blank">
+                        <img src="files/icons/instagram-logo.svg" alt="Instagram" style="width:30px;height:30px;">
+                    </a>
+                </div>
+                <div class="ig-name">
+                    <a href="https://www.instagram.com/i_am_summerrr/" target="_blank">
+                        i_am_summerrr
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="menu-div">
         <img class="menu" src="files/icons/hamburger-menu.svg" alt="Menu">
         <div class="dropdown" id="dropdown-menu">
             <a href="#about">About Me</a>
-            <a href="#projects">Clients</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
