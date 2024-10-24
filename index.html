@@ -38,13 +38,13 @@
             font-size: 30px;
         }
 
-        .ig-container{
+        .ig-container {
             display: flex;
             align-items: center;
-            padding-top:6px;
+            padding-top: 6px;
         }
 
-        .ig-logo{
+        .ig-logo {
             margin-right: 10px;
         }
 
@@ -77,59 +77,52 @@
         }
 
         .dropdown a:hover {
-          background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
         }
 
-        .my-work{
-          padding-left: 30px;
-
+        .my-work {
+            padding-left: 30px;
         }
 
-.work-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Set a consistent 20px gap between items */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
-    }
-    
+        .work-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .work {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
 
-.work {
-    width: 100%; /* Full width to fill grid cell */
-    height: auto; /* Maintain aspect ratio for images */
-    object-fit:contain;
-    
-}
-
-
-
-video {
-    width: 100%; /* Make videos take full width of grid cell */
-    height: auto; /* Maintain aspect ratio for videos */
-    object-fit: contain; /* Cover the area of the grid cell */
-    margin: 20px;
-}
-
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 20px;
+        }
 
         /* Tab bar styling */
-                .tabs {
+        .tabs {
             display: flex;
             justify-content: center;
             margin: 20px 0;
             background-color: transparent;
             padding: 0px;
             border-radius: 5px;
-            max-width: 100%; /* Ensure the container doesn't exceed screen width */
-            overflow-x: auto; /* Enable horizontal scrolling if content overflows */
-            flex-wrap: wrap; /* Allow tabs to wrap to the next line if necessary */
+            max-width: 100%;
+            overflow-x: auto;
+            flex-wrap: wrap;
         }
 
         .tab {
-            flex-shrink: 0; /* Prevent tabs from shrinking too much on smaller screens */
+            flex-shrink: 0;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 18px;
@@ -139,7 +132,6 @@ video {
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-
 
         .tab:hover {
             background-color: #ddd;
@@ -157,7 +149,7 @@ video {
         <div class="creator">MEI RUOCHEN</div>
         <div>Set Designer</div>
 
-        <div>                      
+        <div>
             <div class="ig-container">
                 <div class="ig-logo">
                     <a href="https://www.instagram.com/i_am_summerrr/" target="_blank">
@@ -171,7 +163,6 @@ video {
                 </div>
             </div>
         </div>
-
     </div>
     <div class="menu-div">
         <img class="menu" src="files/icons/hamburger-menu.svg" alt="Menu">
@@ -184,10 +175,8 @@ video {
 
 <main>
     <div class="tabs">
-        <div class="tab active" data-category="all">All</div>
-        <div class="tab" data-category="advertising">Advertising</div>
+        <div class="tab active" data-category="commercial, editorial">Commercial & Editorial</div>
         <div class="tab" data-category="fashion-film">Fashion Film</div>
-        <div class="tab" data-category="editorial">Editorial</div>
     </div>
 
     <div>
@@ -195,67 +184,54 @@ video {
     </div>
 
     <!-- Work images with category classes -->
-    <div>
-<!-- Work images with category classes -->
-<div class="work-container">
-  <img class="work advertising" src="files/works/advertising/CAMPAIGN 1 - PUBLISHED BY.jpg" alt="Work 1 - Advertising">
-  <img class="work advertising" src="files/works/advertising/CAMPAIGN 2 - PUBLISHED BY.jpg" alt="Work 2 - Advertising">
-  <img class="work advertising" src="files/works/advertising/CAMPAIGN 3 - PUBLISHED BY.jpg" alt="Work 3 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Commercial Campaign 1 - LINLIN CHASSE.jpg" alt="Work 4 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Commercial Campaign 2 - LINLIN CHASSE.jpg" alt="Work 5 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Commercial Campaign 3 - LINLIN CHASSE.jpg" alt="Work 6 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Commercial Campaign 4 - LINLIN CHASSE.jpg" alt="Work 7 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Commercial Campaign 5 - LINLIN CHASSE.jpg" alt="Work 8 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Social Campaign 1 - Zona 20.jpg" alt="Work 9 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Social Campaign 2 - Zona 20.jpg" alt="Work 10 - Advertising">
-  <img class="work advertising" src="files/works/advertising/Social Campaign 3 - Zona 20.jpg" alt="Work 11 - Advertising">
+    <div class="work-container">
+        <img class="work advertising" src="files/works/advertising/CAMPAIGN 1 - PUBLISHED BY.jpg" alt="Work 1 - Advertising">
+        <img class="work advertising" src="files/works/advertising/CAMPAIGN 2 - PUBLISHED BY.jpg" alt="Work 2 - Advertising">
+        <img class="work advertising" src="files/works/advertising/CAMPAIGN 3 - PUBLISHED BY.jpg" alt="Work 3 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Commercial Campaign 1 - LINLIN CHASSE.jpg" alt="Work 4 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Commercial Campaign 2 - LINLIN CHASSE.jpg" alt="Work 5 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Commercial Campaign 3 - LINLIN CHASSE.jpg" alt="Work 6 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Commercial Campaign 4 - LINLIN CHASSE.jpg" alt="Work 7 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Commercial Campaign 5 - LINLIN CHASSE.jpg" alt="Work 8 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Social Campaign 1 - Zona 20.jpg" alt="Work 9 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Social Campaign 2 - Zona 20.jpg" alt="Work 10 - Advertising">
+        <img class="work advertising" src="files/works/advertising/Social Campaign 3 - Zona 20.jpg" alt="Work 11 - Advertising">
 
-  
-  
+        <img class="work editorial" src="files/works/editorial/Editorial (1).jpg" alt="Work 1 - Editorial">
+        <img class="work editorial" src="files/works/editorial/Editorial (2).jpg" alt="Work 2 - Editorial">
+        <img class="work editorial" src="files/works/editorial/Editorial (3).jpg" alt="Work 3 - Editorial">
+        <img class="work editorial" src="files/works/editorial/Editorial - L_officiel .jpg" alt="Work 4 - Editorial">
+        <img class="work editorial" src="files/works/editorial/EDITORIAL -prop styling- GQ CHINA-1.JPG" alt="Work 5 - Editorial">
+        <img class="work editorial" src="files/works/editorial/Editorial.jpg" alt="Work 6 - Editorial">
 
+        <div>
+            <video class="work fashion-film" controls>
+                <source src="files/works/fashion-film/Long Commercial -PEACEBIRD.mp4" type="video/mp4">
+                Your browser does not support mp4 video format.
+            </video>
+        </div>
 
-  <img class="work editorial" src="files/works/editorial/Editorial (1).jpg" alt="Work 1 - Editorial">
-  <img class="work editorial" src="files/works/editorial/Editorial (2).jpg" alt="Work 2 - Editorial">
-  <img class="work editorial" src="files/works/editorial/Editorial (3).jpg" alt="Work 3 - Editorial">
-  <img class="work editorial" src="files/works/editorial/Editorial - L_officiel .jpg" alt="Work 4 - Editorial">
-  <img class="work editorial" src="files/works/editorial/EDITORIAL -prop styling- GQ CHINA-1.JPG" alt="Work 5 - Editorial">
-  <img class="work editorial" src="files/works/editorial/Editorial.jpg" alt="Work 6 - Editorial">
+        <div>
+            <video class="work fashion-film" controls>
+                <source src="files/works/fashion-film/Long Commercial Campaign - ZONA 20 .mov" type="video/mp4">
+                Your browser does not support mov video format.
+            </video>
+        </div>
 
+        <div>
+            <video class="work fashion-film" controls>
+                <source src="files/works/fashion-film/Set Design for Zona20 AW24 - Long Commercial .mov" type="video/mp4">
+                Your browser does not support mov video format.
+            </video>
+        </div>
 
-
-
-
-
-
-  <div>
-    <video class="work fashion-film" controls>
-        <source src="files/works/fashion-film/Long Commercial -PEACEBIRD.mp4" type="video/mp4">
-        Your browser does not support mp4 video format.
-    </video>
-  </div>
-
-  <div>
-    <video class="work fashion-film" controls>
-        <source src="files/works/fashion-film/Long Commercial Campaign - ZONA 20 .mov" type="video/mp4">
-        Your browser does not support mov video format.
-    </video>
-  </div>
-
-  <div>
-    <video class="work fashion-film" controls>
-        <source src="files/works/fashion-film/Set Design for Zona20 AW24 - Long Commercial .mov" type="video/mp4">
-        Your browser does not support mov video format.
-    </video>
-  </div>
-
-  <div>
-    <video class="work fashion-film" controls>
-        <source src="files/works/fashion-film/Short Commercial Campaign 1- ZONA20.mov" type="video/mp4">
-        Your browser does not support mov video format.
-    </video>
-  </div>
-    
-</div>
+        <div>
+            <video class="work fashion-film" controls>
+                <source src="files/works/fashion-film/Short Commercial Campaign 1- ZONA20.mov" type="video/mp4">
+                Your browser does not support mov video format.
+            </video>
+        </div>
+    </div>
 </main>
 
 <script>
@@ -274,46 +250,49 @@ video {
         }
     });
 
- // Tab bar functionality
-const tabs = document.querySelectorAll('.tab');
-const works = document.querySelectorAll('.work');
+    // Tab bar functionality
+    const tabs = document.querySelectorAll('.tab');
+    const works = document.querySelectorAll('.work');
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', function () {
-        // Remove 'active' class from all tabs
-        tabs.forEach(tab => tab.classList.remove('active'));
-        // Add 'active' class to the clicked tab
-        this.classList.add('active');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            // Remove 'active' class from all tabs
+            tabs.forEach(tab => tab.classList.remove('active'));
+            // Add 'active' class to the clicked tab
+            this.classList.add('active');
 
-        const category = this.getAttribute('data-category');
+            const category = this.getAttribute('data-category');
 
-        // Hide all works first
-        works.forEach(work => {
-            work.style.display = 'none'; // Hide all works initially
+            // Hide all works first
+            works.forEach(work => {
+                work.style.display = 'none'; // Hide all works initially
+            });
+
+            // Show works based on the selected category
+            if (category.includes('commercial') || category.includes('editorial')) {
+                works.forEach(work => {
+                    if (work.classList.contains('advertising') || work.classList.contains('editorial')) {
+                        work.style.display = 'block'; // Show works that match the selected category
+                    }
+                });
+            } else {
+                works.forEach(work => {
+                    if (work.classList.contains(category)) {
+                        work.style.display = 'block'; // Show works that match the selected category
+                    }
+                });
+            }
         });
+    });
 
-        // Show works based on the selected category
-        if (category === 'all') {
-            works.forEach(work => {
-                work.style.display = 'block'; // Show all works
-            });
-        } else {
-            works.forEach(work => {
-                if (work.classList.contains(category)) {
-                    work.style.display = 'block'; // Show works that match the selected category
-                }
-            });
+    // Show the first tab's works by default on page load
+    document.querySelectorAll('.work').forEach(work => {
+        work.style.display = 'none'; // Hide all works initially
+    });
+    // Display Commercial & Editorial works by default
+    works.forEach(work => {
+        if (work.classList.contains('advertising') || work.classList.contains('editorial')) {
+            work.style.display = 'block'; // Show works that match the selected category
         }
     });
-});
-
-// Show all works by default on page load
-document.querySelectorAll('.work').forEach(work => {
-    work.style.display = 'block'; // Show all works initially
-});
-
-
 </script>
-
-</body>
-</html>
