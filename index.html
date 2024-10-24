@@ -28,7 +28,7 @@
             position: fixed;
             left: 0;
             right: 0;
-            padding: 10px 20px 30px 20px;
+            padding: 20px 20px 20px 20px;
             background-color: white;
             z-index: 10;
         }
@@ -116,13 +116,13 @@
             background-color: transparent;
             padding: 0px;
             border-radius: 5px;
-            max-width: 100%;
+            max-width: 95%;
             overflow-x: auto;
             flex-wrap: nowrap;
         }
 
         .tab {
-            flex-shrink: 0;
+            flex-shrink: 1;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 18px;
@@ -141,6 +141,41 @@
             background-color: #393939;
             color: white;
         }
+
+
+
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Limit max width */
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -169,6 +204,7 @@
         <div class="dropdown" id="dropdown-menu">
             <a href="#about">About Me</a>
             <a href="#contact">Contact</a>
+            
         </div>
     </div>
 </header>
@@ -232,22 +268,104 @@
             </video>
         </div>
     </div>
+
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-popup" id="close-popup">&times;</span>
+            <div id="about" class="popup-section">
+                <h2>About Me</h2>
+                <p>
+                    You're face to face with greatness, and it's strange
+                    You don't even know how you feel
+                    It's adorable
+                    Well, it's nice to see that humans never change
+                    
+                    Open your eyes, let's begin
+                    Yes, it's really me, it's Ruochen, breathe it in
+                    I know it's a lot, the hair, the bod
+                    When you're staring at a demi-god
+                    
+                    What can I say except you're welcome
+                    For the tides, the sun, the sky
+                    Hey, it's okay, it's okay
+                    You're welcome
+                    I'm just an ordinary demi-guy
+                    
+                    Hey, what has two thumbs that pulled up the sky
+                    When you were waddling yay high
+                    This guy
+                    When the nights got cold
+                    Who stole you fire from down below?
+                    You're lookin' at him, yo
+                    
+                    Oh, also I lassoed the sun
+                    You're welcome
+                    To stretch the days and bring you fun
+                    Also, I harnessed the breeze
+                    You're welcome
+                    To fill your sails and shake your trees
+                    
+                    So what can I say except you're welcome
+                    For the islands I pulled from the sea
+                    There's no need to pray, it's okay
+                    You're welcome
+                    Ha, I guess it's just my way of being me
+                    You're welcome
+                    You're welcome
+                    
+                    </p>
+            </div>
+            <div id="contact" class="popup-section" style="display: none;">
+                <h2>Contact</h2>
+                <p>Hey, I just met you, and this is crazy
+                    But here's my number, so call me, maybe.</p>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <script>
     // Dropdown menu toggle
-    document.querySelector('.menu').addEventListener('click', function () {
+    document.querySelector('.menu').addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent event from bubbling up
         const dropdown = document.getElementById('dropdown-menu');
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
     // Close dropdown if clicking outside of it
     window.addEventListener('click', function (event) {
-        const menu = document.querySelector('.menu');
         const dropdown = document.getElementById('dropdown-menu');
-        if (!menu.contains(event.target)) {
-            dropdown.style.display = 'none';
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none'; // Hide dropdown if clicked outside
         }
+    });
+
+    // Close dropdown when a menu item is clicked and show corresponding section
+    const menuItems = document.querySelectorAll('#dropdown-menu a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.style.display = 'none'; // Hide dropdown when a menu item is clicked
+
+            const sectionId = this.getAttribute('href').substring(1); // Remove '#' from href
+            const popup = document.getElementById('popup');
+
+            // Hide all popup sections initially
+            document.querySelectorAll('.popup-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section in the popup
+            document.getElementById(sectionId).style.display = 'block';
+            popup.style.display = 'flex'; // Show the popup
+        });
+    });
+
+    // Close popup when close button is clicked
+    document.getElementById('close-popup').addEventListener('click', function () {
+        document.getElementById('popup').style.display = 'none'; // Hide the popup
     });
 
     // Tab bar functionality
@@ -296,3 +414,5 @@
         }
     });
 </script>
+</body>
+</html>
