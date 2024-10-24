@@ -11,10 +11,13 @@
             color: rgb(50, 50, 50);
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrollbars */
         }
+
 
         main {
             padding-top: 300px;
+            overflow-x: hidden; /* Prevent horizontal scrollbars */
         }
 
         a {
@@ -112,13 +115,15 @@
         .tabs {
             display: flex;
             justify-content: center;
-            margin: 0px;
+            margin: 0;
             background-color: transparent;
-            padding: 0px;
+            padding: 0;
             border-radius: 5px;
-            max-width: 95%;
+            width: 100%; /* Ensure it takes the full width */
+            max-width: 100%; /* Prevent horizontal overflow */
             overflow-x: auto;
             flex-wrap: nowrap;
+            box-sizing: border-box; /* Ensure padding and borders don't affect the total width */
         }
 
         .tab {
