@@ -1,0 +1,65 @@
+.my-work {
+  padding-left: 30px;
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* adjust min,max-width for each column */
+  gap: 20px; /* gap between items */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.work {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 20px;
+  cursor: pointer;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  margin-top: 5px;
+}
+
+/* Enlarge image popup styles */
+#image-popup {
+  display: none; /* Ensure it is hidden on page load */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+
+#image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 0px;
+}
+
+#image-popup .close-image-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
